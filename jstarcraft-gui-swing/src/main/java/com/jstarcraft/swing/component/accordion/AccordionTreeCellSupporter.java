@@ -9,10 +9,11 @@ import javax.swing.tree.TreeNode;
 
 import com.jstarcraft.swing.component.CellPanel;
 import com.jstarcraft.swing.support.TreeCellSupporter;
+import com.jstarcraft.swing.support.cell.TreeCell;
 
-public class AccordionTreeCellSupporter<F, T> extends TreeCellSupporter<F, T> {
+public class AccordionTreeCellSupporter<D> extends TreeCellSupporter<D> {
 
-    public AccordionTreeCellSupporter(CellPanel<F, T> renderPanel, CellPanel<F, T> editPanel) {
+    public AccordionTreeCellSupporter(CellPanel<TreeCell<D>, D> renderPanel, CellPanel<TreeCell<D>, D> editPanel) {
         super(renderPanel, editPanel);
     }
 
@@ -67,8 +68,8 @@ public class AccordionTreeCellSupporter<F, T> extends TreeCellSupporter<F, T> {
     }
 
     @Override
-    public CellPanel<F, T> getTreeCellRendererComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int index, boolean focused) {
-        CellPanel<F, T> panel = super.getTreeCellRendererComponent(tree, value, selected, expanded, leaf, index, focused);
+    public CellPanel<TreeCell<D>, D> getTreeCellRendererComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int index, boolean focused) {
+        CellPanel<TreeCell<D>, D> panel = super.getTreeCellRendererComponent(tree, value, selected, expanded, leaf, index, focused);
         // 关键代码
         // 使渲染器与树的宽度保持一致
         calculatePanelSize(panel, tree, (TreeNode) value);
@@ -76,8 +77,8 @@ public class AccordionTreeCellSupporter<F, T> extends TreeCellSupporter<F, T> {
     }
 
     @Override
-    public CellPanel<F, T> getTreeCellEditorComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int index) {
-        CellPanel<F, T> panel = super.getTreeCellEditorComponent(tree, value, selected, expanded, leaf, index);
+    public CellPanel<TreeCell<D>, D> getTreeCellEditorComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int index) {
+        CellPanel<TreeCell<D>, D> panel = super.getTreeCellEditorComponent(tree, value, selected, expanded, leaf, index);
         // 关键代码
         // 使编辑器与树的宽度保持一致
         calculatePanelSize(panel, tree, (TreeNode) value);

@@ -1,8 +1,10 @@
 package com.jstarcraft.swing.support.cell;
 
+import java.util.Objects;
+
 import javax.swing.JTree;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.MutableTreeNode;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreePath;
 
 import com.jstarcraft.swing.support.SupportCell;
 
@@ -12,84 +14,76 @@ import com.jstarcraft.swing.support.SupportCell;
  * @author Birdy
  *
  */
-public class TreeCell implements SupportCell {
+public class TreeCell<T> implements SupportCell<T> {
 
     private JTree tree;
 
-    private MutableTreeNode parent;
+    private DefaultMutableTreeNode node;
 
-    private MutableTreeNode child;
-
-    private int number;
-
-    private int index;
-
-    public TreeCell(JTree tree, MutableTreeNode node, int index) {
+    public TreeCell(JTree tree, DefaultMutableTreeNode node) {
         this.tree = tree;
-        this.child = node;
-        this.parent = (MutableTreeNode) this.child.getParent();
-        if (this.parent != null) {
-            this.number = this.parent.getIndex(this.child);
-        }
-        this.index = index;
+        this.node = node;
     }
 
     @Override
-    public void attach() {
-        if (this.parent != null && parent.getIndex(child) == -1) {
-            parent.insert(child, number);
-            DefaultTreeModel model = (DefaultTreeModel) tree.getModel();
-            model.reload(parent);
-        }
+    public boolean isSelected() {
+        TreePath path = new TreePath(node.getPath());
+        return tree.isPathSelected(path);
     }
 
     @Override
-    public void detach() {
-        if (this.parent != null && parent.getIndex(child) != -1) {
-            child.removeFromParent();
-            DefaultTreeModel model = (DefaultTreeModel) tree.getModel();
-            model.reload(parent);
-        }
+    public boolean isEditing() {
+        TreePath path = new TreePath(node.getPath());
+        return Objects.equals(path, tree.getEditingPath());
     }
 
     @Override
-    public void cancel() {
-        tree.getCellEditor().cancelCellEditing();
+    public void startEditing(Runnable runable) {
+        TreePath path = new TreePath(node.getPath());
+        tree.startEditingAtPath(path);
+        runable.run();
     }
 
     @Override
-    public void complete() {
-        tree.getCellEditor().stopCellEditing();
+    public void stopEdting(boolean cancel, Runnable runable) {
+        if (cancel) {
+            tree.cancelEditing();
+        } else {
+            tree.stopEditing();
+        }
+        runable.run();
     }
 
     @Override
-    public boolean selected() {
-        if (parent.getIndex(child) != -1) {
-            return tree.isPathSelected(tree.getPathForRow(index));
-        }
-        return false;
+    public T getData() {
+        return (T) node.getUserObject();
     }
 
-    public int getIndex() {
-        if (parent.getIndex(child) != -1) {
-            return index;
+    @Override
+    public void setData(Object data) {
+        if (isEditing()) {
+            throw new IllegalStateException();
         }
-        return -1;
+        TreePath path = new TreePath(node.getPath());
+        tree.getModel().valueForPathChanged(path, data);
     }
 
     public boolean isToggle() {
-        if (this.parent == null || parent.getIndex(child) != -1) {
-            return tree.isExpanded(index);
-        }
-        return false;
+        TreePath path = new TreePath(node.getPath());
+        return tree.isExpanded(path);
     }
 
     public void setToggle(boolean toggle) {
+        TreePath path = new TreePath(node.getPath());
         if (toggle) {
-            tree.expandRow(index);
+            tree.expandPath(path);
         } else {
-            tree.collapseRow(index);
+            tree.collapsePath(path);
         }
+    }
+
+    public boolean isLeaf() {
+        return node.isLeaf();
     }
 
 }

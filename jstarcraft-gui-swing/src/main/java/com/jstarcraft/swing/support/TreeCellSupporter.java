@@ -13,6 +13,7 @@ import javax.swing.JTree;
 import javax.swing.SwingUtilities;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeCellEditor;
 import javax.swing.tree.TreeCellRenderer;
 import javax.swing.tree.TreePath;
@@ -21,6 +22,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.jstarcraft.swing.component.CellPanel;
+import com.jstarcraft.swing.support.cell.TreeCell;
 
 /**
  * 树单元支撑器
@@ -29,15 +31,15 @@ import com.jstarcraft.swing.component.CellPanel;
  *
  */
 // 参考CheckBoxNodeEditor,MultipleButtonsInTreeNode
-public abstract class TreeCellSupporter<I, O> extends AbstractCellEditor implements TreeCellRenderer, TreeCellEditor, PropertyChangeListener {
+public abstract class TreeCellSupporter<D> extends AbstractCellEditor implements TreeCellRenderer, TreeCellEditor, PropertyChangeListener {
 
     protected static final Logger logger = LoggerFactory.getLogger(TreeCellSupporter.class);
 
     /** 渲染面板 */
-    protected CellPanel<I, O> renderPanel;
+    protected CellPanel<TreeCell<D>, D> renderPanel;
 
     /** 编辑面板 */
-    protected CellPanel<I, O> editPanel;
+    protected CellPanel<TreeCell<D>, D> editPanel;
 
     protected ChangeListener innerListener = (event) -> {
         triggerCellListeners();
@@ -45,14 +47,15 @@ public abstract class TreeCellSupporter<I, O> extends AbstractCellEditor impleme
 
     protected LinkedHashSet<ChangeListener> outerListeners = new LinkedHashSet<>();
 
-    public TreeCellSupporter(CellPanel<I, O> renderPanel, CellPanel<I, O> editPanel) {
+    public TreeCellSupporter(CellPanel<TreeCell<D>, D> renderPanel, CellPanel<TreeCell<D>, D> editPanel) {
         this.renderPanel = renderPanel;
         this.editPanel = editPanel;
     }
 
     @Override
-    public CellPanel<I, O> getTreeCellRendererComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int index, boolean focused) {
-        renderPanel.setData((I) value);
+    public CellPanel<TreeCell<D>, D> getTreeCellRendererComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int index, boolean focused) {
+        TreeCell<D> cell = new TreeCell<>(tree, (DefaultMutableTreeNode) value);
+        renderPanel.setData(cell);
         return renderPanel;
     }
 
@@ -75,7 +78,7 @@ public abstract class TreeCellSupporter<I, O> extends AbstractCellEditor impleme
                 boolean expanded = tree.isExpanded(path);
                 boolean leaf = tree.getModel().isLeaf(value);
                 point.translate(-bound.x, -bound.y);
-                CellPanel<I, O> panel = getTreeCellRendererComponent(tree, value, selected, expanded, leaf, index, true);
+                CellPanel<TreeCell<D>, D> panel = getTreeCellRendererComponent(tree, value, selected, expanded, leaf, index, true);
                 // 因为渲染器与编辑器不在组件树之中,所以不能使用SwingUtilities.convertPoint
                 panel.setLocation(0, 0);
                 panel.setSize(bound.getSize());
@@ -87,8 +90,9 @@ public abstract class TreeCellSupporter<I, O> extends AbstractCellEditor impleme
     }
 
     @Override
-    public CellPanel<I, O> getTreeCellEditorComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int index) {
-        editPanel.setData((I) value);
+    public CellPanel<TreeCell<D>, D> getTreeCellEditorComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int index) {
+        TreeCell<D> cell = new TreeCell<>(tree, (DefaultMutableTreeNode) value);
+        editPanel.setData(cell);
         // 保证仅在编辑过程监控可变面板
         editPanel.attachDataListener(innerListener);
         return editPanel;
@@ -109,7 +113,7 @@ public abstract class TreeCellSupporter<I, O> extends AbstractCellEditor impleme
     }
 
     @Override
-    public O getCellEditorValue() {
+    public D getCellEditorValue() {
         return editPanel.getData();
     }
 

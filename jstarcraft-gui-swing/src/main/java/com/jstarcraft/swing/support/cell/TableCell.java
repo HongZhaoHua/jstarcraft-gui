@@ -1,5 +1,7 @@
 package com.jstarcraft.swing.support.cell;
 
+import javax.swing.JTable;
+
 import com.jstarcraft.swing.support.SupportCell;
 
 /**
@@ -8,36 +10,55 @@ import com.jstarcraft.swing.support.SupportCell;
  * @author Birdy
  *
  */
-public class TableCell implements SupportCell {
+public class TableCell<T> implements SupportCell<T> {
 
-    @Override
-    public void attach() {
-        // TODO Auto-generated method stub
+    private JTable table;
 
+    private int row, column;
+
+    public TableCell(JTable table, int row, int column) {
+        this.table = table;
+        this.row = row;
+        this.column = column;
     }
 
     @Override
-    public void detach() {
-        // TODO Auto-generated method stub
-
+    public boolean isSelected() {
+        return table.isCellSelected(row, column);
     }
 
     @Override
-    public void cancel() {
-        // TODO Auto-generated method stub
-
+    public boolean isEditing() {
+        return table.getEditingRow() == row && table.getEditingColumn() == column;
     }
 
     @Override
-    public void complete() {
-        // TODO Auto-generated method stub
-
+    public void startEditing(Runnable runable) {
+        table.editCellAt(row, column);
+        runable.run();
     }
 
     @Override
-    public boolean selected() {
-        // TODO Auto-generated method stub
-        return false;
+    public void stopEdting(boolean cancel, Runnable runable) {
+        if (cancel) {
+            table.getCellEditor().cancelCellEditing();
+        } else {
+            table.getCellEditor().stopCellEditing();
+        }
+        runable.run();
+    }
+
+    @Override
+    public T getData() {
+        return (T) table.getValueAt(row, column);
+    }
+
+    @Override
+    public void setData(T data) {
+        if (isEditing()) {
+            throw new IllegalStateException();
+        }
+        table.setValueAt(data, row, column);
     }
 
     public int getRow() {

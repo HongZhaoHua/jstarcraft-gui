@@ -12,8 +12,9 @@ import javax.swing.tree.DefaultMutableTreeNode;
 
 import com.jstarcraft.core.utility.KeyValue;
 import com.jstarcraft.swing.component.CellPanel;
+import com.jstarcraft.swing.support.cell.TreeCell;
 
-public class SupportPanel extends CellPanel<DefaultMutableTreeNode, KeyValue<String, Boolean>> {
+public class SupportPanel extends CellPanel<TreeCell<KeyValue<String, Boolean>>, KeyValue<String, Boolean>> {
 
     private JCheckBox checkBox;
 
@@ -39,8 +40,8 @@ public class SupportPanel extends CellPanel<DefaultMutableTreeNode, KeyValue<Str
     }
 
     @Override
-    public void setData(DefaultMutableTreeNode data) {
-        KeyValue<String, Boolean> keyValue = (KeyValue) ((DefaultMutableTreeNode) data).getUserObject();
+    public void setData(TreeCell<KeyValue<String, Boolean>> data) {
+        KeyValue<String, Boolean> keyValue = data.getData();
         textField.setText(keyValue.getKey());
         checkBox.setSelected(keyValue.getValue());
         triggerDataListeners();

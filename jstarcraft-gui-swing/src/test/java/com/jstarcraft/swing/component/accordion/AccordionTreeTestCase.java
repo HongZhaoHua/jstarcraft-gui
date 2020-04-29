@@ -35,7 +35,7 @@ public class AccordionTreeTestCase {
         });
         DefaultTreeModel model = new DefaultTreeModel(root);
         AccordionTree tree = new AccordionTree(model);
-        AccordionTreeCellSupporter<DefaultMutableTreeNode, KeyValue<String, Boolean>> supporter = new AccordionTreeCellSupporter<>(new SupportPanel(), new SupportPanel());
+        AccordionTreeCellSupporter<KeyValue<String, Boolean>> supporter = new AccordionTreeCellSupporter<>(new SupportPanel(), new SupportPanel());
         tree.setCellRenderer(supporter);
         tree.setCellEditor(supporter);
         tree.addPropertyChangeListener("UI", supporter);

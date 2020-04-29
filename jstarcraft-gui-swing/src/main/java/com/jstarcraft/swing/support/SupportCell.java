@@ -6,31 +6,49 @@ package com.jstarcraft.swing.support;
  * @author Birdy
  *
  */
-public interface SupportCell {
+public interface SupportCell<T> {
 
     /**
-     * 添加
+     * 是否选择中
+     * 
+     * @return
      */
-    void attach();
+    boolean isSelected();
 
     /**
-     * 移除
+     * 是否编辑中
+     * 
+     * @return
      */
-    void detach();
+    boolean isEditing();
 
     /**
-     * 取消
+     * 启动编辑
+     * 
+     * @param runable
      */
-    void cancel();
+    void startEditing(Runnable runable);
 
     /**
-     * 完成
+     * 停止编辑
+     * 
+     * @param cancel
+     * @param runable
      */
-    void complete();
+    void stopEdting(boolean cancel, Runnable runable);
 
     /**
-     * 选择
+     * 获取数据
+     * 
+     * @return
      */
-    boolean selected();
+    T getData();
+
+    /**
+     * 设置数据
+     * 
+     * @param data
+     */
+    void setData(T data);
 
 }

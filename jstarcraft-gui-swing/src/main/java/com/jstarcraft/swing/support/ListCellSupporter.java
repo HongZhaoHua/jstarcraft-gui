@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.jstarcraft.swing.component.CellPanel;
+import com.jstarcraft.swing.support.cell.ListCell;
 
 /**
  * 列单元支撑器
@@ -20,15 +21,15 @@ import com.jstarcraft.swing.component.CellPanel;
  *
  */
 // 参考ButtonsInListCell,CheckBoxCellList,DifferentCellHeight
-public class ListCellSupporter<E> implements ListCellRenderer<E>, PropertyChangeListener {
+public class ListCellSupporter<D> implements ListCellRenderer<D>, PropertyChangeListener {
 
     protected static final Logger logger = LoggerFactory.getLogger(ListCellSupporter.class);
 
     /** 渲染面板 */
-    protected CellPanel<E, E> renderPanel;
+    protected CellPanel<ListCell<D>, D> renderPanel;
 
     @Override
-    public Component getListCellRendererComponent(JList<? extends E> list, E value, int index, boolean selected, boolean focused) {
+    public Component getListCellRendererComponent(JList<? extends D> list, D value, int index, boolean selected, boolean focused) {
         // TODO Auto-generated method stub
         return null;
     }

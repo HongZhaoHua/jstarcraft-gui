@@ -20,6 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.jstarcraft.swing.component.CellPanel;
+import com.jstarcraft.swing.support.cell.TableCell;
 
 /**
  * 表单元支撑器
@@ -28,15 +29,15 @@ import com.jstarcraft.swing.component.CellPanel;
  *
  */
 // 参考CheckBoxesInTableCell,MultipleButtonsInTableCell,RadioButtonsInTableCell,TableCellProgressBar,ComboCellEditor,ComboCellRenderer 
-public class TableCellSupporter<I, O> extends AbstractCellEditor implements TableCellRenderer, TableCellEditor, PropertyChangeListener {
+public class TableCellSupporter<D> extends AbstractCellEditor implements TableCellRenderer, TableCellEditor, PropertyChangeListener {
 
     protected static final Logger logger = LoggerFactory.getLogger(TableCellSupporter.class);
 
     /** 渲染面板 */
-    protected CellPanel<I, O> renderPanel;
+    protected CellPanel<TableCell<D>, D> renderPanel;
 
     /** 编辑面板 */
-    protected CellPanel<I, O> editPanel;
+    protected CellPanel<TableCell<D>, D> editPanel;
 
     protected ChangeListener innerListener = (event) -> {
         triggerChangeListeners();
@@ -44,14 +45,15 @@ public class TableCellSupporter<I, O> extends AbstractCellEditor implements Tabl
 
     protected LinkedHashSet<ChangeListener> outerListeners = new LinkedHashSet<>();
 
-    public TableCellSupporter(CellPanel<I, O> renderPanel, CellPanel<I, O> editPanel) {
+    public TableCellSupporter(CellPanel<TableCell<D>, D> renderPanel, CellPanel<TableCell<D>, D> editPanel) {
         this.renderPanel = renderPanel;
         this.editPanel = editPanel;
     }
 
     @Override
-    public CellPanel<I, O> getTableCellRendererComponent(JTable table, Object value, boolean selected, boolean focused, int row, int column) {
-        renderPanel.setData((I) value);
+    public CellPanel<TableCell<D>, D> getTableCellRendererComponent(JTable table, Object value, boolean selected, boolean focused, int row, int column) {
+        TableCell<D> cell = new TableCell<>(table, row, column);
+        renderPanel.setData(cell);
         return renderPanel;
     }
 
@@ -84,8 +86,9 @@ public class TableCellSupporter<I, O> extends AbstractCellEditor implements Tabl
     }
 
     @Override
-    public CellPanel<I, O> getTableCellEditorComponent(JTable table, Object value, boolean selected, int row, int column) {
-        editPanel.setData((I) value);
+    public CellPanel<TableCell<D>, D> getTableCellEditorComponent(JTable table, Object value, boolean selected, int row, int column) {
+        TableCell<D> cell = new TableCell<>(table, row, column);
+        editPanel.setData(cell);
         // 保证仅在编辑过程监控可变面板
         editPanel.attachDataListener(innerListener);
         return editPanel;
@@ -106,7 +109,7 @@ public class TableCellSupporter<I, O> extends AbstractCellEditor implements Tabl
     }
 
     @Override
-    public O getCellEditorValue() {
+    public D getCellEditorValue() {
         return editPanel.getData();
     }
 
