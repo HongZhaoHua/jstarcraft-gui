@@ -10,6 +10,6 @@ import org.junit.runners.Suite.SuiteClasses;
         RollSpinnerModelTestCase.class,
 
 })
-public class ModelTestCase {
+public class ModelTestSuite {
 
 }
