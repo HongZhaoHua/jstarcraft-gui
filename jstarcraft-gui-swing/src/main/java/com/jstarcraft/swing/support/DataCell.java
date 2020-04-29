@@ -35,7 +35,7 @@ public interface DataCell<T> {
      * @param cancel
      * @param runable
      */
-    void stopEdting(boolean cancel, Runnable runable);
+    void stopEditing(boolean cancel, Runnable runable);
 
     /**
      * 获取数据

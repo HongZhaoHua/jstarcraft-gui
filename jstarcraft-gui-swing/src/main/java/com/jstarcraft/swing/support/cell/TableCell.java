@@ -39,7 +39,7 @@ public class TableCell<T> implements DataCell<T> {
     }
 
     @Override
-    public void stopEdting(boolean cancel, Runnable runable) {
+    public void stopEditing(boolean cancel, Runnable runable) {
         if (cancel) {
             table.getCellEditor().cancelCellEditing();
         } else {
@@ -62,11 +62,11 @@ public class TableCell<T> implements DataCell<T> {
     }
 
     public int getRow() {
-        return 0;
+        return row;
     }
 
     public int getColumn() {
-        return 0;
+        return column;
     }
 
 }

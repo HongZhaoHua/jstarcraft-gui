@@ -38,7 +38,7 @@ public class ListCell<T> implements DataCell<T> {
     }
 
     @Override
-    public void stopEdting(boolean cancel, Runnable runable) {
+    public void stopEditing(boolean cancel, Runnable runable) {
         throw new UnsupportedOperationException();
     }
 

@@ -27,25 +27,25 @@ public class TreeCell<T> implements DataCell<T> {
 
     @Override
     public boolean isSelected() {
-        TreePath path = new TreePath(node.getPath());
+        TreePath path = getPath();
         return tree.isPathSelected(path);
     }
 
     @Override
     public boolean isEditing() {
-        TreePath path = new TreePath(node.getPath());
+        TreePath path = getPath();
         return Objects.equals(path, tree.getEditingPath());
     }
 
     @Override
     public void startEditing(Runnable runable) {
-        TreePath path = new TreePath(node.getPath());
+        TreePath path = getPath();
         tree.startEditingAtPath(path);
         runable.run();
     }
 
     @Override
-    public void stopEdting(boolean cancel, Runnable runable) {
+    public void stopEditing(boolean cancel, Runnable runable) {
         if (cancel) {
             tree.cancelEditing();
         } else {
@@ -64,17 +64,22 @@ public class TreeCell<T> implements DataCell<T> {
         if (isEditing()) {
             throw new IllegalStateException();
         }
-        TreePath path = new TreePath(node.getPath());
+        TreePath path = getPath();
         tree.getModel().valueForPathChanged(path, data);
     }
 
+    public int getIndex() {
+        TreePath path = getPath();
+        return tree.getRowForPath(path);
+    }
+
     public boolean isToggle() {
-        TreePath path = new TreePath(node.getPath());
+        TreePath path = getPath();
         return tree.isExpanded(path);
     }
 
     public void setToggle(boolean toggle) {
-        TreePath path = new TreePath(node.getPath());
+        TreePath path = getPath();
         if (toggle) {
             tree.expandPath(path);
         } else {
@@ -84,6 +89,10 @@ public class TreeCell<T> implements DataCell<T> {
 
     public boolean isLeaf() {
         return node.isLeaf();
+    }
+
+    public TreePath getPath() {
+        return new TreePath(node.getPath());
     }
 
 }
