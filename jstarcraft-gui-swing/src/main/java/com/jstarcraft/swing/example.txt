@@ -1,0 +1,40 @@
+Swing Library-This library contains a number of advanced components and layout managers the Java Swing framework is missing:
+https://github.com/oliverwatkins/swing_library
+
+Swing实例: 
+https://www.w3cschool.cn/java/codetag-swing.html
+
+Java Swing图形界面开发与案例详解随书实例代码:
+http://code1.okbase.net/codefile/mainframe.java_2012122219034_53.htm
+
+Swing Hacks:
+http://shop.oreilly.com/product/9780596009076.do
+https://resources.oreilly.com/examples/9780596009076
+
+Java Swing 2nd Edition:
+http://shop.oreilly.com/product/9780596004088.do
+https://resources.oreilly.com/examples/9780596004088
+
+Java Swing example:
+https://github.com/aterai/java-swing-tips
+
+SwingSet:
+https://github.com/unix-junkie/swingset-jdk12
+https://github.com/iaavo/swingset2
+https://github.com/sjas/swingset3
+
+All projects are based on ☕ Java(Swing.All projects are database(MySql) connected📂 and compatible to run is🖥️ Desktop(with .exe)🖱️.All projects have a Graphical User Interface(GUI)👨🏻‍💻 that user can communicate and understand the application easily):
+https://github.com/soumyadip007/Java-JavaFx-Swing-Projects-Desktop-Application-GUI-Software
+
+IntelliJ IDEA Community Edition:
+https://github.com/JetBrains/intellij-community
+
+Gerrit的博客:
+https://www.jug-muenster.de/author/ggrunwald
+
+Swing port of the SteelSeries gauges:
+https://github.com/HanSolo/SteelSeries-Swing
+
+Repository für den Talk vom 20.04.2011 der Jug Münster:
+https://github.com/dhiller/swingbasics
+

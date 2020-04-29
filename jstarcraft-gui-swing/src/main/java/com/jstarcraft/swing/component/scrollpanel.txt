@@ -1,0 +1,17 @@
+Java JTable视图窗口滚动并定位到某一行:
+https://www.cnblogs.com/shellpicker/p/9173846.html
+
+JavaGUI——Swing组件基础（四）下拉框/列表框/滚动窗格组件:
+https://blog.csdn.net/weixin_42247720/article/details/80480760
+
+使用Swing的JList组件实现可滑动的图片列表、好友列表:
+https://blog.csdn.net/qq_40064948/article/details/81273790
+
+控制JScrollPane自动滚动到某组件位置:
+https://www.xuebuyuan.com/1364814.html
+
+实现 JScrollPane 自动滚动:
+https://www.iteye.com/blog/wuhui-1766761
+
+JTable插入一个新行后，如何让滚动条滚动到最新的那行，并选中它:
+https://bbs.csdn.net/topics/240076245

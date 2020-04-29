@@ -1,0 +1,11 @@
+超炫Swing折叠菜单，完全模仿win xp左边折叠伸缩效果，精美极致！:
+https://blog.csdn.net/lilinhai548/article/details/8227259
+
+Swing UI - 可收起与开展内容面板实现演示:
+https://blog.51cto.com/gloomyfish/1400275
+
+[JExtensionPanel]可伸缩的面板:
+https://www.iteye.com/blog/folio-1622464
+
+Swing写的可折叠的功能菜单:
+https://www.iteye.com/blog/xhmder-933511

@@ -1,0 +1,2 @@
+Java BufferedImage设置透明背景:
+https://juejin.im/post/5cc156b75188252d862b5e0d

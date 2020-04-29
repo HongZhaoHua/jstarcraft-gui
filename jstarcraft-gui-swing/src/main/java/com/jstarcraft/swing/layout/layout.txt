@@ -1,0 +1,17 @@
+setPreferredSize和setSize的区别及用法:
+https://www.cnblogs.com/YingYue/p/4203575.html
+
+GridBagLayout使用:
+https://www.jianshu.com/p/b0f781c3e8c2
+
+Java 的布局管理器GridBagLayout的使用方法【图文说明】:
+https://www.cnblogs.com/taoweiji/archive/2012/12/14/2818787.html
+
+GridBagLayout布局管理器应用详解:
+https://www.iteye.com/blog/yyzjava-1181552
+
+GridBagLayout:
+https://www.cnblogs.com/mohanchen/p/10268821.html
+
+GridBagLayout布局:
+https://www.pianshen.com/article/1357251861/

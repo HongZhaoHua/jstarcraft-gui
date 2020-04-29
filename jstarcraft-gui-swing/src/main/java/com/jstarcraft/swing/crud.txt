@@ -1,0 +1,8 @@
+Swing开发简单图形用户界面与数据库的链接、数据处理示例详解:
+https://blog.csdn.net/qq_18404993/article/details/86535676
+
+在 Java Swing 应用程序中使用 Hibernate:
+https://netbeans.org/kb/docs/java/hibernate-java-se_zh_CN.html
+
+JavaSwing+Hibernate实现简单的学生信息管理系统:
+https://blog.csdn.net/qq_23483671/article/details/72886914
