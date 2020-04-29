@@ -1,7 +1,7 @@
 package com.jstarcraft.swing.support;
 
 /**
- * 支撑单元
+ * 数据单元
  * 
  * @author Birdy
  *
