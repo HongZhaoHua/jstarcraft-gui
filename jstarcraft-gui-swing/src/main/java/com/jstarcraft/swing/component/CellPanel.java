@@ -3,7 +3,7 @@ package com.jstarcraft.swing.component;
 import java.awt.LayoutManager;
 import java.awt.Point;
 
-import com.jstarcraft.swing.support.SupportCell;
+import com.jstarcraft.swing.support.DataCell;
 
 /**
  * 格子面板
@@ -15,7 +15,7 @@ import com.jstarcraft.swing.support.SupportCell;
  * @author Birdy
  *
  */
-public abstract class CellPanel<C extends SupportCell<D>, D> extends DataPanel<C, D> {
+public abstract class CellPanel<C extends DataCell<D>, D> extends DataPanel<C, D> {
 
     public CellPanel() {
         super();

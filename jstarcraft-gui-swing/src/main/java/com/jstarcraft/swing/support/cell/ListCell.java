@@ -3,7 +3,7 @@ package com.jstarcraft.swing.support.cell;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
 
-import com.jstarcraft.swing.support.SupportCell;
+import com.jstarcraft.swing.support.DataCell;
 
 /**
  * 列单元
@@ -11,7 +11,7 @@ import com.jstarcraft.swing.support.SupportCell;
  * @author Birdy
  *
  */
-public class ListCell<T> implements SupportCell<T> {
+public class ListCell<T> implements DataCell<T> {
 
     private JList<T> list;
 

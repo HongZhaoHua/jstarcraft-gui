@@ -6,7 +6,7 @@ import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
 
-import com.jstarcraft.swing.support.SupportCell;
+import com.jstarcraft.swing.support.DataCell;
 
 /**
  * 树单元
@@ -14,7 +14,7 @@ import com.jstarcraft.swing.support.SupportCell;
  * @author Birdy
  *
  */
-public class TreeCell<T> implements SupportCell<T> {
+public class TreeCell<T> implements DataCell<T> {
 
     private JTree tree;
 

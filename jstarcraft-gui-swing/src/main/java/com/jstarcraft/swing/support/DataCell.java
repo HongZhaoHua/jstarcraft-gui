@@ -6,7 +6,7 @@ package com.jstarcraft.swing.support;
  * @author Birdy
  *
  */
-public interface SupportCell<T> {
+public interface DataCell<T> {
 
     /**
      * 是否选择中

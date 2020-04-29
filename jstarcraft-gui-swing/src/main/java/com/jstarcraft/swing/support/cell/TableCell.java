@@ -2,7 +2,7 @@ package com.jstarcraft.swing.support.cell;
 
 import javax.swing.JTable;
 
-import com.jstarcraft.swing.support.SupportCell;
+import com.jstarcraft.swing.support.DataCell;
 
 /**
  * 表单元
@@ -10,7 +10,7 @@ import com.jstarcraft.swing.support.SupportCell;
  * @author Birdy
  *
  */
-public class TableCell<T> implements SupportCell<T> {
+public class TableCell<T> implements DataCell<T> {
 
     private JTable table;
 
