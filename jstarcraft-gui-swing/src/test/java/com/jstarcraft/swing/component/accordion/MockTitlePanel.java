@@ -10,13 +10,13 @@ import javax.swing.border.MatteBorder;
 
 import com.jstarcraft.swing.component.DataPanel;
 
-public class TitlePanel extends DataPanel<Integer, Integer> {
+public class MockTitlePanel extends DataPanel<Integer, Integer> {
 
     private static final Border border = new MatteBorder(1, 1, 1, 1, new Color(0, 0, 0));
 
     private JLabel titleLabel;
 
-    public TitlePanel() {
+    public MockTitlePanel() {
         super(new BorderLayout());
 
         this.titleLabel = new JLabel();

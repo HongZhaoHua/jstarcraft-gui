@@ -39,7 +39,9 @@ public class TreeCell<T> implements DataCell<T> {
     public void startEditing(Runnable runable) {
         TreePath path = getPath();
         tree.startEditingAtPath(path);
-        runable.run();
+        if (runable != null) {
+            runable.run();
+        }
     }
 
     @Override
@@ -49,7 +51,9 @@ public class TreeCell<T> implements DataCell<T> {
         } else {
             tree.stopEditing();
         }
-        runable.run();
+        if (runable != null) {
+            runable.run();
+        }
     }
 
     @Override

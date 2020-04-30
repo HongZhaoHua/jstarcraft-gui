@@ -27,7 +27,26 @@ public interface DataCell<T> {
      * 
      * @param runable
      */
+    default void startEditing() {
+        startEditing(null);
+    }
+
+    /**
+     * 启动编辑
+     * 
+     * @param runable
+     */
     void startEditing(Runnable runable);
+
+    /**
+     * 停止编辑
+     * 
+     * @param cancel
+     * @param runable
+     */
+    default void stopEditing(boolean cancel) {
+        stopEditing(cancel, null);
+    }
 
     /**
      * 停止编辑

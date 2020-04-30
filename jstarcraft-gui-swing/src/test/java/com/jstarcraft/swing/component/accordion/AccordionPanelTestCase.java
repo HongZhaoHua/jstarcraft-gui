@@ -19,11 +19,11 @@ public class AccordionPanelTestCase {
         DefaultListModel<Integer> model = new DefaultListModel<>();
         IntStream.rangeClosed(1, 5).forEach(model::addElement);
         AccordionPanel<Integer> panel = new AccordionPanel<>(model, (data) -> {
-            TitlePanel title = new TitlePanel();
+            MockTitlePanel title = new MockTitlePanel();
             title.setData(data);
             return title;
         }, (data) -> {
-            ContentPanel content = new ContentPanel();
+            MockContentPanel content = new MockContentPanel();
             content.setData(new KeyValue<>("Content", data));
             return content;
         });

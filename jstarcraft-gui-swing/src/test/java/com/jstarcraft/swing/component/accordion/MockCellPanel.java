@@ -2,25 +2,22 @@ package com.jstarcraft.swing.component.accordion;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.Point;
 
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.tree.DefaultMutableTreeNode;
 
 import com.jstarcraft.core.utility.KeyValue;
 import com.jstarcraft.swing.cell.TreeCell;
 import com.jstarcraft.swing.component.CellPanel;
 
-public class SupportPanel extends CellPanel<TreeCell<KeyValue<String, Boolean>>, KeyValue<String, Boolean>> {
+public class MockCellPanel extends CellPanel<TreeCell<KeyValue<String, Boolean>>, KeyValue<String, Boolean>> {
 
     private JCheckBox checkBox;
 
     private JTextField textField;
 
-    public SupportPanel() {
+    public MockCellPanel() {
         super(new BorderLayout());
 
         this.checkBox = new JCheckBox();
@@ -48,8 +45,7 @@ public class SupportPanel extends CellPanel<TreeCell<KeyValue<String, Boolean>>,
     }
 
     @Override
-    public boolean isVariable(Point point) {
-        Component component = SwingUtilities.getDeepestComponentAt(this, point.x, point.y);
+    public boolean isEditable(Component component) {
         return component == checkBox || component == textField;
     }
 

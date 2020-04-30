@@ -1,7 +1,7 @@
 package com.jstarcraft.swing.component;
 
+import java.awt.Component;
 import java.awt.LayoutManager;
-import java.awt.Point;
 
 import com.jstarcraft.swing.cell.DataCell;
 
@@ -34,11 +34,11 @@ public abstract class CellPanel<C extends DataCell<D>, D> extends DataPanel<C, D
     }
 
     /**
-     * 判断点是否在可变区域
+     * 判断是否为可编辑组件
      * 
      * @param point
      * @return
      */
-    public abstract boolean isVariable(Point point);
+    public abstract boolean isEditable(Component component);
 
 }

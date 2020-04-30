@@ -1,5 +1,6 @@
 package com.jstarcraft.swing.cell;
 
+import java.awt.Component;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
@@ -81,8 +82,9 @@ public abstract class TreeCellSupporter<D> extends AbstractCellEditor implements
                 // 因为渲染器与编辑器不在组件树之中,所以不能使用SwingUtilities.convertPoint
                 panel.setLocation(0, 0);
                 panel.setSize(bound.getSize());
-                // 判断坐标是否在编辑区域
-                return panel.isVariable(point);
+                // 判断是否为可编辑组件
+                Component component = SwingUtilities.getDeepestComponentAt(panel, point.x, point.y);
+                return panel.isEditable(component);
             }
         }
         return false;

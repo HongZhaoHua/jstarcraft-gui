@@ -33,7 +33,9 @@ public class TableCell<T> implements DataCell<T> {
     @Override
     public void startEditing(Runnable runable) {
         table.editCellAt(row, column);
-        runable.run();
+        if (runable != null) {
+            runable.run();
+        }
     }
 
     @Override
@@ -43,7 +45,9 @@ public class TableCell<T> implements DataCell<T> {
         } else {
             table.getCellEditor().stopCellEditing();
         }
-        runable.run();
+        if (runable != null) {
+            runable.run();
+        }
     }
 
     @Override
