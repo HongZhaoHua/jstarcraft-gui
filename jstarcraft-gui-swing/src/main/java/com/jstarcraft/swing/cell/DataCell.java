@@ -1,7 +1,7 @@
 package com.jstarcraft.swing.cell;
 
 /**
- * 数据单元
+ * 数据单元格
  * 
  * @author Birdy
  *

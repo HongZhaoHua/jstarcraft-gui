@@ -3,7 +3,7 @@ package com.jstarcraft.swing.cell;
 import javax.swing.JTable;
 
 /**
- * 表单元
+ * 表单元格
  * 
  * @author Birdy
  *

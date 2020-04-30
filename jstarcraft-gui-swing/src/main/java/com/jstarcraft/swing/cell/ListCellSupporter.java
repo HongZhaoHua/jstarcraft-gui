@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import com.jstarcraft.swing.component.CellPanel;
 
 /**
- * 列单元支撑器
+ * 列单元格支撑器
  * 
  * @author Birdy
  *

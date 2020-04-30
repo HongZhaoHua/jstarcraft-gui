@@ -4,7 +4,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JList;
 
 /**
- * 列单元
+ * 列单元格
  * 
  * @author Birdy
  *

@@ -6,7 +6,7 @@ import java.awt.Point;
 import com.jstarcraft.swing.cell.DataCell;
 
 /**
- * 格子面板
+ * 单元格面板
  * 
  * <pre>
  * 为渲染器与编辑器提供支撑

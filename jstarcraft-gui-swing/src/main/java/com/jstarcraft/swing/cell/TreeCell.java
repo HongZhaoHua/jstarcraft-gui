@@ -7,7 +7,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
 
 /**
- * 树单元
+ * 树单元格
  * 
  * @author Birdy
  *

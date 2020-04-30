@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
 import com.jstarcraft.swing.component.CellPanel;
 
 /**
- * 表单元支撑器
+ * 表单元格支撑器
  * 
  * @author Birdy
  *
