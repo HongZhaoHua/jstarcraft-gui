@@ -2,6 +2,7 @@ package com.jstarcraft.swing.component.accordion;
 
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.time.Instant;
 import java.util.Hashtable;
 import java.util.Vector;
 
@@ -29,9 +30,16 @@ public class AccordionTree extends JTree {
     // 使节点与树的宽度保持一致
     private class ResizeHandler extends ComponentAdapter {
 
+        private Instant ignore = Instant.now();
+
         @Override
         public void componentResized(ComponentEvent event) {
-            firePropertyChange(JTree.CELL_RENDERER_PROPERTY, null, getCellRenderer());
+            // 忽略50毫秒,防止循环触发大小变更
+            Instant now = Instant.now();
+            if (now.isAfter(ignore)) {
+                ignore = now.plusMillis(50);
+                firePropertyChange(JTree.CELL_RENDERER_PROPERTY, null, getCellRenderer());
+            }
         }
 
     }
