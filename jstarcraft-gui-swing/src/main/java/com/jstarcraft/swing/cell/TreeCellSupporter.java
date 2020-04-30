@@ -1,4 +1,4 @@
-package com.jstarcraft.swing.support;
+package com.jstarcraft.swing.cell;
 
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -22,7 +22,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.jstarcraft.swing.component.CellPanel;
-import com.jstarcraft.swing.support.cell.TreeCell;
 
 /**
  * 树单元支撑器

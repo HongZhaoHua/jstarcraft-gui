@@ -9,7 +9,7 @@ import javax.swing.JList;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.jstarcraft.swing.support.cell.ListCell;
+import com.jstarcraft.swing.cell.ListCell;
 
 public class ListCellTestCase {
 

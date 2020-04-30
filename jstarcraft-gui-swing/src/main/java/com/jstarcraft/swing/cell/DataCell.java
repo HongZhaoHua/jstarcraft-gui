@@ -1,4 +1,4 @@
-package com.jstarcraft.swing.support;
+package com.jstarcraft.swing.cell;
 
 /**
  * 数据单元

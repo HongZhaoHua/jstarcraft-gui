@@ -3,7 +3,7 @@ package com.jstarcraft.swing.component;
 import java.awt.LayoutManager;
 import java.awt.Point;
 
-import com.jstarcraft.swing.support.DataCell;
+import com.jstarcraft.swing.cell.DataCell;
 
 /**
  * 格子面板

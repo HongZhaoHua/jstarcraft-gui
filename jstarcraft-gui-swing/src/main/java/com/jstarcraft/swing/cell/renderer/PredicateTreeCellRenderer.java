@@ -1,4 +1,4 @@
-package com.jstarcraft.swing.support.renderer;
+package com.jstarcraft.swing.cell.renderer;
 
 import java.awt.Component;
 import java.util.function.Predicate;

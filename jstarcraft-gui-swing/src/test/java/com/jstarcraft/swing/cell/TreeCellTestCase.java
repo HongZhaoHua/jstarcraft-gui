@@ -10,7 +10,7 @@ import javax.swing.tree.DefaultTreeModel;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.jstarcraft.swing.support.cell.TreeCell;
+import com.jstarcraft.swing.cell.TreeCell;
 
 public class TreeCellTestCase {
 

@@ -7,9 +7,9 @@ import javax.swing.JTree;
 import javax.swing.UIManager;
 import javax.swing.tree.TreeNode;
 
+import com.jstarcraft.swing.cell.TreeCell;
+import com.jstarcraft.swing.cell.TreeCellSupporter;
 import com.jstarcraft.swing.component.CellPanel;
-import com.jstarcraft.swing.support.TreeCellSupporter;
-import com.jstarcraft.swing.support.cell.TreeCell;
 
 public class AccordionTreeCellSupporter<D> extends TreeCellSupporter<D> {
 

@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.jstarcraft.swing.support.cell.TableCell;
+import com.jstarcraft.swing.cell.TableCell;
 
 public class TableCellTestCase {
 

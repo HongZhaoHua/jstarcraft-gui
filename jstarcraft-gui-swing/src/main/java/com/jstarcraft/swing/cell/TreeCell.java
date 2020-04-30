@@ -1,12 +1,10 @@
-package com.jstarcraft.swing.support.cell;
+package com.jstarcraft.swing.cell;
 
 import java.util.Objects;
 
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
-
-import com.jstarcraft.swing.support.DataCell;
 
 /**
  * 树单元

@@ -1,8 +1,6 @@
-package com.jstarcraft.swing.support.cell;
+package com.jstarcraft.swing.cell;
 
 import javax.swing.JTable;
-
-import com.jstarcraft.swing.support.DataCell;
 
 /**
  * 表单元

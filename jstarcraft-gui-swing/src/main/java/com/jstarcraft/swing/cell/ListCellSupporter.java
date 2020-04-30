@@ -1,4 +1,4 @@
-package com.jstarcraft.swing.support;
+package com.jstarcraft.swing.cell;
 
 import java.awt.Component;
 import java.beans.PropertyChangeEvent;
@@ -12,7 +12,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.jstarcraft.swing.component.CellPanel;
-import com.jstarcraft.swing.support.cell.ListCell;
 
 /**
  * 列单元支撑器

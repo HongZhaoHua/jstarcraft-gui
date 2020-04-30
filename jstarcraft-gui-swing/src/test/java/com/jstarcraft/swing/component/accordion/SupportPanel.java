@@ -11,8 +11,8 @@ import javax.swing.SwingUtilities;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 import com.jstarcraft.core.utility.KeyValue;
+import com.jstarcraft.swing.cell.TreeCell;
 import com.jstarcraft.swing.component.CellPanel;
-import com.jstarcraft.swing.support.cell.TreeCell;
 
 public class SupportPanel extends CellPanel<TreeCell<KeyValue<String, Boolean>>, KeyValue<String, Boolean>> {
 

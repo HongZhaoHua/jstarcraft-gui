@@ -1,9 +1,7 @@
-package com.jstarcraft.swing.support.cell;
+package com.jstarcraft.swing.cell;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
-
-import com.jstarcraft.swing.support.DataCell;
 
 /**
  * 列单元
