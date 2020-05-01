@@ -8,9 +8,9 @@ import javax.swing.JComponent;
 
 import org.jaxen.JaxenException;
 
-import com.jstarcraft.swing.xpath.SwingAttributeNode;
-import com.jstarcraft.swing.xpath.SwingComponentNode;
-import com.jstarcraft.swing.xpath.SwingXPath;
+import com.jstarcraft.core.common.selection.xpath.swing.SwingAttributeNode;
+import com.jstarcraft.core.common.selection.xpath.swing.SwingComponentNode;
+import com.jstarcraft.core.common.selection.xpath.swing.SwingXPath;
 
 /**
  * 正则内容校验器
