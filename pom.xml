@@ -52,6 +52,11 @@
             </dependency>
 
             <!-- 多媒体框架依赖 -->
+            <dependency>
+                <groupId>org.bytedeco</groupId>
+                <artifactId>javacv-platform</artifactId>
+                <version>1.5.3</version>
+            </dependency>
 
             <!-- 界面框架依赖 -->
             <dependency>
