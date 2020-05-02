@@ -9,3 +9,6 @@ https://www.w3school.com.cn/media/media_mimeref.asp
 
 Java获取文件Content-Type(Mime-Type):
 https://blog.csdn.net/saytime/article/details/51497529
+
+Mime4j:
+http://james.apache.org/mime4j
