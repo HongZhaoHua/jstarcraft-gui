@@ -9,3 +9,6 @@ https://zhuanlan.zhihu.com/p/23090320
 https://zhuanlan.zhihu.com/p/23377305
 https://zhuanlan.zhihu.com/p/23531863
 https://zhuanlan.zhihu.com/p/23717383
+
+图像和流媒体 - I 帧,B帧,P帧,IDR帧的区别:
+https://blog.csdn.net/qq_29350001/article/details/73770702
