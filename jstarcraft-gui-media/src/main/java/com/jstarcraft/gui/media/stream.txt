@@ -22,5 +22,5 @@ https://www.hangge.com/blog/cache/detail_1325.html
 RTP协议分析:
 https://blog.csdn.net/bripengandre/article/details/2238818
 
-HTML5 RTSP paly a HTML5 streaming server:
-https://github.com/liweilup/h5stream
+SMS is a java-based streaming server:
+https://github.com/pengliren/sms
