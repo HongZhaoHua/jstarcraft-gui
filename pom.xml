@@ -8,6 +8,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>jstarcraft-gui-im</module>
         <module>jstarcraft-gui-media</module>
         <module>jstarcraft-gui-swing</module>
     </modules>
