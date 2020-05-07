@@ -24,3 +24,12 @@ https://blog.csdn.net/bripengandre/article/details/2238818
 
 SMS is a java-based streaming server:
 https://github.com/pengliren/sms
+
+Windows下搭建Nginx服务器:
+https://www.jianshu.com/p/30ee45f05a9e
+
+利用FFmpeg实现RTMP推流:
+https://www.jianshu.com/p/c141fc7881e7
+
+VLC播放器或者Web实现RTMP拉流:
+https://www.jianshu.com/p/54d4b3faa00d
