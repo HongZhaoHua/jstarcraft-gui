@@ -1,3 +1,6 @@
+The JAVE (Java Audio Video Encoder) library is Java wrapper on the ffmpeg project:
+https://github.com/a-schild/jave2
+
 Web Browser, Flash Player, HTML editor, Media player for Swing:
 https://github.com/Chrriis/DJ-Native-Swing
 
