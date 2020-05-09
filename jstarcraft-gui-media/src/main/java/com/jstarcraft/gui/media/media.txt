@@ -17,9 +17,6 @@ https://www.cnblogs.com/weyoung1987/p/4092633.html
 使用JMF进行视频、音频的采集与实时传送:
 https://www.cnblogs.com/yyyyy5101/archive/2011/03/08/1976907.html
 
-The JAVE (Java Audio Video Encoder) library is Java wrapper on the ffmpeg project:
-https://github.com/a-schild/jave2
-
 Web Browser, Flash Player, HTML editor, Media player for Swing:
 https://github.com/Chrriis/DJ-Native-Swing
 

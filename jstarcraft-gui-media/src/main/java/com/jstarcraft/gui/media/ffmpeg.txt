@@ -1,0 +1,33 @@
+The JAVE (Java Audio Video Encoder) library is Java wrapper on the ffmpeg project:
+https://github.com/a-schild/jave2
+
+FFmpeg系列文章:
+https://blog.csdn.net/eguid_1/article/details/81369055
+
+JavaCPP-FFmpeg视频编解码系列:
+https://blog.csdn.net/eguid_1/category_9958268.html
+
+使用FFmpeg或者Java录制音频总结:
+https://www.jianshu.com/p/b9da4ded4dda
+
+Java使用FFmpeg处理视频文件指南:
+https://www.cnblogs.com/Dreamer-1/p/10394011.html
+
+FFmpeg 使用说明:
+https://github.com/tonydeng/fmj/blob/master/ffmpeg.md
+
+FMJ (FFmpeg for Java)-通过Java调用FFMpeg命令的方式来对音视频进行处理:
+https://github.com/tonydeng/fmj
+
+最简单的基于FFmpeg的封装格式处理系列文章:
+https://blog.csdn.net/leixiaohua1020/article/details/25422685
+https://blog.csdn.net/leixiaohua1020/article/details/39767055
+https://blog.csdn.net/leixiaohua1020/article/details/39802819
+https://blog.csdn.net/leixiaohua1020/article/details/39802913
+
+雷霄骅(leixiaohua1020)的专栏
+https://blog.csdn.net/leixiaohua1020
+https://gitee.com/leixiaohua1020
+
+整理雷霄骅CSDN上面的代码资源:
+https://gitee.com/leixiaohua
