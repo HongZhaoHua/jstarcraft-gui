@@ -16,6 +16,9 @@ https://blog.csdn.net/qq_29350001/article/details/73770702
 理解音视频 PTS 和 DTS:
 https://www.cnblogs.com/samirchen/p/7071824.html
 
+图解DTS和PTS:
+https://www.cnblogs.com/linyilong3/p/9940230.html
+
 RTSP 与 RTMP 协议:
 https://www.jianshu.com/p/c2284659452f
 
