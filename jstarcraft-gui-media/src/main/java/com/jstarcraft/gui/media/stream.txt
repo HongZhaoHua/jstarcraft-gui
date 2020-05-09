@@ -13,6 +13,9 @@ https://zhuanlan.zhihu.com/p/23717383
 图像和流媒体 - I 帧,B帧,P帧,IDR帧的区别:
 https://blog.csdn.net/qq_29350001/article/details/73770702
 
+理解音视频 PTS 和 DTS:
+https://www.cnblogs.com/samirchen/p/7071824.html
+
 RTSP 与 RTMP 协议:
 https://www.jianshu.com/p/c2284659452f
 
