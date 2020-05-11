@@ -10,6 +10,9 @@ https://zhuanlan.zhihu.com/p/23377305
 https://zhuanlan.zhihu.com/p/23531863
 https://zhuanlan.zhihu.com/p/23717383
 
+Java流媒体技术汇总:
+https://eguid.blog.csdn.net/category_9266736.html
+
 图像和流媒体 - I 帧,B帧,P帧,IDR帧的区别:
 https://blog.csdn.net/qq_29350001/article/details/73770702
 
