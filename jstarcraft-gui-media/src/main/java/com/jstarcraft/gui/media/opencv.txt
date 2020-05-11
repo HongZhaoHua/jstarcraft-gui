@@ -1,3 +1,6 @@
+OpenCV documentation:
+https://docs.opencv.org/master
+
 OpenCV系列文章:
 https://blog.csdn.net/eguid_1/article/details/53236923
 

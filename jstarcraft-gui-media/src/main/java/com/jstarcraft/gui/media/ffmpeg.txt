@@ -1,3 +1,6 @@
+FFmpeg documentation:
+http://ffmpeg.org/doxygen/trunk/
+
 The JAVE (Java Audio Video Encoder) library is Java wrapper on the ffmpeg project:
 https://github.com/a-schild/jave2
 
