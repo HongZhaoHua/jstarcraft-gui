@@ -1,0 +1,8 @@
+mult-media support web service (多媒体处理的web服务):
+https://gitee.com/liuyueyi/quick-media
+
+java-html2image:
+https://github.com/hkirk/java-html2image
+
+This is a HTML2Image and HTML2PDF Converter:
+https://github.com/maschhoff/HtmlConverter
