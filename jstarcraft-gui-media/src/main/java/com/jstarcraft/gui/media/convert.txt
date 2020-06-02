@@ -1,3 +1,13 @@
+HTML转为图片:
+https://me.csdn.net/qq_36029699
+
+HTML转图片网页截屏:
+https://www.cnblogs.com/lixiaoran/p/10594023.html
+https://www.cnblogs.com/lixiaoran/p/10800207.html
+
+用Java代码根据HTML页面生成图片:
+https://blog.csdn.net/sunnyjerry/article/details/78116156
+
 mult-media support web service (多媒体处理的web服务):
 https://gitee.com/liuyueyi/quick-media
 
@@ -6,3 +16,6 @@ https://github.com/hkirk/java-html2image
 
 This is a HTML2Image and HTML2PDF Converter:
 https://github.com/maschhoff/HtmlConverter
+
+iText 7 for Java represents the next level of SDKs for developers that want to take advantage of the benefits PDF can bring. Equipped with a better document engine, high and low-level programming capabilities and the ability to create, edit and enhance PDF documents, iText 7 can be a boon to nearly every workflow:
+https://github.com/itext/itext7
