@@ -1,12 +1,6 @@
 package com.jstarcraft.swing.component.tip;
 
-import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Insets;
-import java.awt.font.FontRenderContext;
-import java.awt.font.TextLayout;
 
 import javax.swing.JTextArea;
 import javax.swing.text.Document;
