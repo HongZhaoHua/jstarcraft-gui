@@ -31,3 +31,12 @@ https://blog.csdn.net/saytime/article/details/51497529
 
 Mime4j:
 http://james.apache.org/mime4j
+
+使用Tika判断文件类型:
+https://www.cnblogs.com/Mr-kevin/p/12014611.html
+
+Tika检测文件类型:
+https://www.cnblogs.com/hww-2429/p/11592753.html
+
+文件类型判断-FileTypeUtil:
+https://www.hutool.cn/docs/#/core/IO/%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD-FileTypeUtil
