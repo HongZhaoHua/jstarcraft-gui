@@ -32,6 +32,9 @@ https://blog.csdn.net/saytime/article/details/51497529
 Mime4j:
 http://james.apache.org/mime4j
 
+Tika in Action(Tika实战):
+https://www.manning.com/books/tika-in-action
+
 使用Tika判断文件类型:
 https://www.cnblogs.com/Mr-kevin/p/12014611.html
 
