@@ -35,6 +35,9 @@ SRS is a RTMP/HLS/WebRTC/SRT/GB28181 streaming cluster, high efficiency, stable 
 https://github.com/ossrs/srs
 https://github.com/ossrs/srs/wiki
 
+期翼流服务器(smart_rtmpd),是一款用于直播,录播性能卓越的服务器:
+https://github.com/superconvert/smart_rtmpd
+
 RTSP/RTP/RTMP/FLV/HLS/MPEG-TS/MPEG-PS/MPEG-DASH/MP4/fMP4:
 https://github.com/ireader/media-server
 
