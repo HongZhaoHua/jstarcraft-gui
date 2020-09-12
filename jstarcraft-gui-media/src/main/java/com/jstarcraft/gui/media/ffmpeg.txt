@@ -35,6 +35,12 @@ https://gitee.com/leixiaohua1020
 整理雷霄骅CSDN上面的代码资源:
 https://gitee.com/leixiaohua
 
+音视频学习-从入门到精通到放弃:
+https://blog.csdn.net/asd501823206/article/details/93391303
+
+ffmpeg学习:
+https://blog.csdn.net/u011913612/category_6545891.html
+
 FFmpeg转封装:
 FFmpeg转码:
 FFmpeg流媒体:
