@@ -7,7 +7,7 @@ import javax.swing.JLabel;
 
 import com.jstarcraft.core.common.instant.CalendarDate;
 import com.jstarcraft.core.common.instant.CalendarType;
-import com.jstarcraft.core.common.instant.LunarDate;
+import com.jstarcraft.core.common.instant.LunisolarDate;
 
 /**
  * 阴历微调面板
@@ -21,15 +21,15 @@ public class LunarCalendarSpinnerPanel extends CalendarSpinnerPanel {
     public LunarCalendarSpinnerPanel(LocalDate date) {
         super();
 
-        CalendarDate calendar = CalendarType.Lunar.getCalendarDate(date);
-        CalendarDate maximum = CalendarType.Lunar.getMaximumDate();
-        CalendarDate minimum = CalendarType.Lunar.getMinimumDate();
+        CalendarDate calendar = CalendarType.Lunisolar.getCalendarDate(date);
+        CalendarDate maximum = CalendarType.Lunisolar.getMaximumDate();
+        CalendarDate minimum = CalendarType.Lunisolar.getMinimumDate();
         setSpinnerBoundary(this.yearSpinner, minimum.getYear(), maximum.getYear());
         // 月转索引
-        int leap = LunarDate.getLeapMonth(calendar.getYear());
+        int leap = LunisolarDate.getLeapMonth(calendar.getYear());
         int monthSize = leap > 0 ? 13 : 12;
         setSpinnerBoundary(this.monthSpinner, 1, monthSize);
-        int daySize = LunarDate.getDaySize(calendar.getYear(), calendar.isLeap(), calendar.getMonth());
+        int daySize = LunisolarDate.getDaySize(calendar.getYear(), calendar.isLeap(), calendar.getMonth());
         setSpinnerBoundary(this.daySpinner, 1, daySize);
 
         this.yearSpinner.addChangeListener(this::adjustSpinnerView);
@@ -54,7 +54,7 @@ public class LunarCalendarSpinnerPanel extends CalendarSpinnerPanel {
             if (event.getSource() == yearSpinner) {
                 int year = (int) yearSpinner.getValue();
                 // 索引转月
-                int leap = LunarDate.getLeapMonth(year);
+                int leap = LunisolarDate.getLeapMonth(year);
                 int index = (int) monthSpinner.getValue();
                 int monthSize = leap > 0 ? 13 : 12;
                 setSpinnerBoundary(monthSpinner, 1, monthSize);
@@ -62,7 +62,7 @@ public class LunarCalendarSpinnerPanel extends CalendarSpinnerPanel {
                     monthSpinner.setValue(monthSize);
                 }
                 int month = leap > 0 && index > leap ? index - 1 : index;
-                int daySize = LunarDate.getDaySize(year, leap > 0 && leap == index - 1, month);
+                int daySize = LunisolarDate.getDaySize(year, leap > 0 && leap == index - 1, month);
                 int day = (int) daySpinner.getValue();
                 setSpinnerBoundary(daySpinner, 1, daySize);
                 if (day > daySize) {
@@ -72,10 +72,10 @@ public class LunarCalendarSpinnerPanel extends CalendarSpinnerPanel {
             if (event.getSource() == monthSpinner) {
                 int year = (int) yearSpinner.getValue();
                 // 索引转月
-                int leap = LunarDate.getLeapMonth(year);
+                int leap = LunisolarDate.getLeapMonth(year);
                 int index = (int) monthSpinner.getValue();
                 int month = leap > 0 && index > leap ? index - 1 : index;
-                int daySize = LunarDate.getDaySize(year, leap > 0 && leap == index - 1, month);
+                int daySize = LunisolarDate.getDaySize(year, leap > 0 && leap == index - 1, month);
                 int day = (int) daySpinner.getValue();
                 setSpinnerBoundary(daySpinner, 1, daySize);
                 if (day > daySize) {
@@ -98,7 +98,7 @@ public class LunarCalendarSpinnerPanel extends CalendarSpinnerPanel {
                 int year = (int) yearSpinner.getValue();
                 JLabel monthLabel = (JLabel) monthSpinner.getEditor();
                 // 索引转月
-                int leap = LunarDate.getLeapMonth(year);
+                int leap = LunisolarDate.getLeapMonth(year);
                 int index = (int) monthSpinner.getValue();
                 int month = leap > 0 && index > leap ? index - 1 : index;
                 monthLabel.setText((leap > 0 && leap == index - 1 ? "闰" : "") + month + "月");
@@ -113,9 +113,9 @@ public class LunarCalendarSpinnerPanel extends CalendarSpinnerPanel {
 
     @Override
     public void setCalendarDate(LocalDate date) {
-        CalendarDate calendar = CalendarType.Lunar.getCalendarDate(date);
+        CalendarDate calendar = CalendarType.Lunisolar.getCalendarDate(date);
         yearSpinner.setValue(calendar.getYear());
-        int leap = LunarDate.getLeapMonth(calendar.getYear());
+        int leap = LunisolarDate.getLeapMonth(calendar.getYear());
         // 月转索引
         int month = calendar.getMonth();
         int index = calendar.isLeap() || (leap > 0 && month > leap) ? month + 1 : month;
@@ -126,18 +126,18 @@ public class LunarCalendarSpinnerPanel extends CalendarSpinnerPanel {
     @Override
     public LocalDate getCalendarDate() {
         int year = ((Number) yearSpinner.getValue()).intValue();
-        int leap = LunarDate.getLeapMonth(year);
+        int leap = LunisolarDate.getLeapMonth(year);
         // 索引转月
         int index = ((Number) monthSpinner.getValue()).intValue();
         int month = leap > 0 && index > leap ? index - 1 : index;
         int day = ((Number) daySpinner.getValue()).intValue();
-        CalendarDate calendar = new LunarDate(year, leap > 0 && leap == index - 1, month, day);
+        CalendarDate calendar = new LunisolarDate(year, leap > 0 && leap == index - 1, month, day);
         return calendar.getDate();
     }
 
     @Override
     public CalendarType getCalendarType() {
-        return CalendarType.Lunar;
+        return CalendarType.Lunisolar;
     }
 
 }

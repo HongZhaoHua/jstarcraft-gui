@@ -10,7 +10,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.jstarcraft.core.common.instant.CalendarDate;
-import com.jstarcraft.core.common.instant.LunarDate;
+import com.jstarcraft.core.common.instant.LunisolarDate;
 
 public class LunarCalendarSpinnerPanenlTestCase {
 
@@ -29,7 +29,7 @@ public class LunarCalendarSpinnerPanenlTestCase {
 
         Thread.sleep(5000L);
         EventQueue.invokeAndWait(() -> {
-            CalendarDate date = new LunarDate(2020, true, 4, 1);
+            CalendarDate date = new LunisolarDate(2020, true, 4, 1);
             panel.setCalendarDate(date.getDate());
             Assert.assertEquals(date.getDate(), panel.getCalendarDate());
         });
