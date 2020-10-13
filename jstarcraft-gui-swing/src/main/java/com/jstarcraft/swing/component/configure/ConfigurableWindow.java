@@ -6,7 +6,7 @@ import java.awt.Window;
 
 import javax.swing.JWindow;
 
-import com.jstarcraft.core.common.configuration.Configurator;
+import com.jstarcraft.core.common.option.Option;
 
 /**
  * 可配置窗体
@@ -16,31 +16,31 @@ import com.jstarcraft.core.common.configuration.Configurator;
  */
 public abstract class ConfigurableWindow extends JWindow implements Configurable {
 
-    protected final Configurator configurator;
+    protected final Option option;
 
-    public ConfigurableWindow(Configurator configurator) {
+    public ConfigurableWindow(Option option) {
         super();
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableWindow(Configurator configurator, Frame owner) {
+    public ConfigurableWindow(Option option, Frame owner) {
         super(owner);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableWindow(Configurator configurator, Window owner) {
+    public ConfigurableWindow(Option option, Window owner) {
         super(owner);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableWindow(Configurator configurator, GraphicsConfiguration graphics) {
+    public ConfigurableWindow(Option option, GraphicsConfiguration graphics) {
         super(graphics);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableWindow(Configurator configurator, Window owner, GraphicsConfiguration graphics) {
+    public ConfigurableWindow(Option option, Window owner, GraphicsConfiguration graphics) {
         super(owner, graphics);
-        this.configurator = configurator;
+        this.option = option;
     }
 
 }

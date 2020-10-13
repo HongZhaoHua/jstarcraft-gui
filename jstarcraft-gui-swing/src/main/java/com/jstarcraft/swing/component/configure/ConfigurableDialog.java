@@ -7,7 +7,7 @@ import java.awt.Window;
 
 import javax.swing.JDialog;
 
-import com.jstarcraft.core.common.configuration.Configurator;
+import com.jstarcraft.core.common.option.Option;
 
 /**
  * 可配置对话框
@@ -17,88 +17,88 @@ import com.jstarcraft.core.common.configuration.Configurator;
  */
 public abstract class ConfigurableDialog extends JDialog implements Configurable {
 
-    protected final Configurator configurator;
+    protected final Option option;
 
-    public ConfigurableDialog(Configurator configurator) {
+    public ConfigurableDialog(Option option) {
         super();
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Dialog owner) {
+    public ConfigurableDialog(Option option, Dialog owner) {
         super(owner);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Dialog owner, String title) {
+    public ConfigurableDialog(Option option, Dialog owner, String title) {
         super(owner, title);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Dialog owner, boolean modal) {
+    public ConfigurableDialog(Option option, Dialog owner, boolean modal) {
         super(owner, modal);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Dialog owner, String title, boolean modal) {
+    public ConfigurableDialog(Option option, Dialog owner, String title, boolean modal) {
         super(owner, title, modal);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Dialog owner, String title, boolean modal, GraphicsConfiguration graphics) {
+    public ConfigurableDialog(Option option, Dialog owner, String title, boolean modal, GraphicsConfiguration graphics) {
         super(owner, title, modal, graphics);
-        this.configurator = configurator;
+        this.option = option;
     }
 
     // JFrame
-    public ConfigurableDialog(Configurator configurator, Frame owner) {
+    public ConfigurableDialog(Option option, Frame owner) {
         super(owner);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Frame owner, String title) {
+    public ConfigurableDialog(Option option, Frame owner, String title) {
         super(owner, title);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Frame owner, boolean modal) {
+    public ConfigurableDialog(Option option, Frame owner, boolean modal) {
         super(owner, modal);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Frame owner, String title, boolean modal) {
+    public ConfigurableDialog(Option option, Frame owner, String title, boolean modal) {
         super(owner, title, modal);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Frame owner, String title, boolean modal, GraphicsConfiguration graphics) {
+    public ConfigurableDialog(Option option, Frame owner, String title, boolean modal, GraphicsConfiguration graphics) {
         super(owner, title, modal, graphics);
-        this.configurator = configurator;
+        this.option = option;
     }
 
     // JWindow
-    public ConfigurableDialog(Configurator configurator, Window owner) {
+    public ConfigurableDialog(Option option, Window owner) {
         super(owner);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Window owner, String title) {
+    public ConfigurableDialog(Option option, Window owner, String title) {
         super(owner, title);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Window owner, ModalityType modality) {
+    public ConfigurableDialog(Option option, Window owner, ModalityType modality) {
         super(owner, modality);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Window owner, String title, ModalityType modality) {
+    public ConfigurableDialog(Option option, Window owner, String title, ModalityType modality) {
         super(owner, title, modality);
-        this.configurator = configurator;
+        this.option = option;
     }
 
-    public ConfigurableDialog(Configurator configurator, Window owner, String title, ModalityType modality, GraphicsConfiguration graphics) {
+    public ConfigurableDialog(Option option, Window owner, String title, ModalityType modality, GraphicsConfiguration graphics) {
         super(owner, title, modality, graphics);
-        this.configurator = configurator;
+        this.option = option;
     }
 
 }

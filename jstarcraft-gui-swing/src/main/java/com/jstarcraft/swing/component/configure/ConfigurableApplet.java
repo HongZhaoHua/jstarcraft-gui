@@ -2,7 +2,7 @@ package com.jstarcraft.swing.component.configure;
 
 import javax.swing.JApplet;
 
-import com.jstarcraft.core.common.configuration.Configurator;
+import com.jstarcraft.core.common.option.Option;
 
 /**
  * 可配置小程序
@@ -12,11 +12,11 @@ import com.jstarcraft.core.common.configuration.Configurator;
  */
 public abstract class ConfigurableApplet extends JApplet implements Configurable {
 
-    protected final Configurator configurator;
+    protected final Option option;
 
-    public ConfigurableApplet(Configurator configurator) {
+    public ConfigurableApplet(Option option) {
         super();
-        this.configurator = configurator;
+        this.option = option;
     }
 
 }
