@@ -1,0 +1,5 @@
+HTML5规范:
+http://www.html5plus.org/doc/h5p.html
+
+ES6、ES7、ES8、ES9、ES10新特性一览之系列学习笔记:
+https://www.cnblogs.com/cmyoung/p/12007068.html

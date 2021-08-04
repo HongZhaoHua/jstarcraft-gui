@@ -20,6 +20,9 @@ https://www.cnblogs.com/yyyyy5101/archive/2011/03/08/1976907.html
 Web Browser, Flash Player, HTML editor, Media player for Swing:
 https://github.com/Chrriis/DJ-Native-Swing
 
+Media Types:
+https://www.iana.org/assignments/media-types/media-types.xhtml
+
 The Complete List of MIME Types:
 https://www.sitepoint.com/mime-types-complete-list
 
