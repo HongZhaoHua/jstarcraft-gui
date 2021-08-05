@@ -19,3 +19,6 @@ https://github.com/maschhoff/HtmlConverter
 
 iText 7 for Java represents the next level of SDKs for developers that want to take advantage of the benefits PDF can bring. Equipped with a better document engine, high and low-level programming capabilities and the ability to create, edit and enhance PDF documents, iText 7 can be a boon to nearly every workflow:
 https://github.com/itext/itext7
+
+PDF爱好者的在线工具:
+https://www.ilovepdf.com/zh-cn
