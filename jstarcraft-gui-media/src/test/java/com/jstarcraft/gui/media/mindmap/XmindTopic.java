@@ -12,7 +12,7 @@ import com.jstarcraft.core.storage.lucene.annotation.LuceneSort;
 import com.jstarcraft.core.storage.lucene.annotation.LuceneStore;
 
 /**
- * 主题
+ * XMind主题
  * 
  * @author Birdy
  *
@@ -36,7 +36,7 @@ public class XmindTopic {
     @LuceneIndex(analyze = true)
     @LuceneStore
     private String title;
-    
+
     /** 根 */
     @LuceneStore
     private String root;
@@ -81,7 +81,7 @@ public class XmindTopic {
     public String getRoot() {
         return root;
     }
-    
+
     public String getId() {
         return id;
     }
