@@ -21,8 +21,7 @@
         <!-- JStarCraft框架依赖 -->
         <dependency>
             <groupId>com.jstarcraft</groupId>
-            <artifactId>jstarcraft-core-storage</artifactId>
-            <version>1.0</version>
+            <artifactId>jstarcraft-core-common</artifactId>
         </dependency>
 
         <!-- 多媒体框架依赖 -->
@@ -42,42 +41,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jstarcraft</groupId>
-            <artifactId>jstarcraft-nlp</artifactId>
-            <version>1.0</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.hankcs</groupId>
-            <artifactId>hanlp</artifactId>
-            <version>portable-1.8.2</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- IK库依赖 -->
-        <dependency>
-            <groupId>com.github.magese</groupId>
-            <artifactId>ik-analyzer</artifactId>
-            <version>8.4.0</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.lucene</groupId>
-                    <artifactId>lucene-analyzers-common</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.apache.lucene</groupId>
-                    <artifactId>lucene-core</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.apache.lucene</groupId>
-                    <artifactId>lucene-queryparser</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <!-- 桥接器:Slf4j使用Log4j2 -->
