@@ -22,3 +22,10 @@ https://github.com/itext/itext7
 
 PDF爱好者的在线工具:
 https://www.ilovepdf.com/zh-cn
+
+Spire PDF转WORD (高效不失真):
+https://www.codeleading.com/article/91722333041/
+
+Java 将PDF 转为Word、图片、SVG、XPS、Html、PDF:
+https://www.cnblogs.com/Yesi/p/11233238.html
+
