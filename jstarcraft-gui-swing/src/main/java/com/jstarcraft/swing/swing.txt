@@ -1,4 +1,7 @@
-Creating a GUI With JFC/Swing
+Java Swing Tips:
+https://ateraimemo.com/Swing.html
+
+Creating a GUI With JFC/Swing:
 https://docs.oracle.com/javase/tutorial/uiswing/index.html
 https://www.cs.utah.edu/~chojs/books/languages/java14/uiswing/index.html
 
