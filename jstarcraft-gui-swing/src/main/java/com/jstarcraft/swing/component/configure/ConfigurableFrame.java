@@ -4,7 +4,7 @@ import java.awt.GraphicsConfiguration;
 
 import javax.swing.JFrame;
 
-import com.jstarcraft.core.common.configuration.Option;
+import com.jstarcraft.core.common.configuration.Configurator;
 
 /**
  * 可配置框架
@@ -14,24 +14,24 @@ import com.jstarcraft.core.common.configuration.Option;
  */
 public abstract class ConfigurableFrame extends JFrame implements Configurable {
 
-    protected final Option option;
+    protected final Configurator option;
 
-    public ConfigurableFrame(Option option) {
+    public ConfigurableFrame(Configurator option) {
         super();
         this.option = option;
     }
 
-    public ConfigurableFrame(Option option, String title) {
+    public ConfigurableFrame(Configurator option, String title) {
         super(title);
         this.option = option;
     }
 
-    public ConfigurableFrame(Option option, GraphicsConfiguration graphics) {
+    public ConfigurableFrame(Configurator option, GraphicsConfiguration graphics) {
         super(graphics);
         this.option = option;
     }
 
-    public ConfigurableFrame(Option option, String title, GraphicsConfiguration graphics) {
+    public ConfigurableFrame(Configurator option, String title, GraphicsConfiguration graphics) {
         super(title, graphics);
         this.option = option;
     }

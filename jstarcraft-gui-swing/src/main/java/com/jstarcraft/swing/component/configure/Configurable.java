@@ -1,6 +1,6 @@
 package com.jstarcraft.swing.component.configure;
 
-import com.jstarcraft.core.common.configuration.Option;
+import com.jstarcraft.core.common.configuration.Configurator;
 
 /**
  * 可配置
@@ -15,13 +15,13 @@ public interface Configurable {
      * 
      * @return
      */
-    Option getConfiguration();
+    Configurator getConfiguration();
 
     /**
      * 设置配置
      * 
      * @param option
      */
-    void setConfiguration(Option option);
+    void setConfiguration(Configurator option);
 
 }
