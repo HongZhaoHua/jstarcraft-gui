@@ -4,7 +4,7 @@ import java.awt.GraphicsConfiguration;
 
 import javax.swing.JFrame;
 
-import com.jstarcraft.core.common.option.Option;
+import com.jstarcraft.core.common.configuration.Option;
 
 /**
  * 可配置框架

@@ -2,7 +2,7 @@ package com.jstarcraft.swing.component.configure;
 
 import javax.swing.JApplet;
 
-import com.jstarcraft.core.common.option.Option;
+import com.jstarcraft.core.common.configuration.Option;
 
 /**
  * 可配置小程序

@@ -7,7 +7,7 @@ import java.awt.Window;
 
 import javax.swing.JDialog;
 
-import com.jstarcraft.core.common.option.Option;
+import com.jstarcraft.core.common.configuration.Option;
 
 /**
  * 可配置对话框

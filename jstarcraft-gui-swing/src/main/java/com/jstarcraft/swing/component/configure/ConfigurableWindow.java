@@ -6,7 +6,7 @@ import java.awt.Window;
 
 import javax.swing.JWindow;
 
-import com.jstarcraft.core.common.option.Option;
+import com.jstarcraft.core.common.configuration.Option;
 
 /**
  * 可配置窗体
