@@ -1,3 +1,12 @@
+Java library for parsing and rendering CommonMark (Markdown):
+https://github.com/commonmark/commonmark-java
+
+Java 使用 CommonMark 将 Markdown 解析为 HTML:
+https://simplesolution.dev/java-parse-markdown-to-html-using-commonmark/
+
+CommonMark/Markdown Java parser with source level AST. CommonMark 0.28, emulation of: pegdown, kramdown, markdown.pl, MultiMarkdown. With HTML to MD, MD to PDF, MD to DOCX conversion modules:
+https://github.com/vsch/flexmark-java
+
 Generate doc for java maven project.(java 项目自动生成文档):
 https://blog.csdn.net/ryo1060732496/article/details/88650947
 https://github.com/houbb/idoc
