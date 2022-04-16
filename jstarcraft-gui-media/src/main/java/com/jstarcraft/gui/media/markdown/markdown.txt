@@ -10,6 +10,9 @@ https://www.appinn.com/markdown/
 Markdown 在线工具
 http://mahua.jser.me/
 
+使用commonmark和flexmark在Java中将Markdown格式文本转换成HTML格式文本:
+https://blog.csdn.net/Piconjo/article/details/105473409
+
 Java library to generate markdown:
 https://github.com/Steppschuh/Java-Markdown-Generator
 
