@@ -1,0 +1,11 @@
+Generate doc for java maven project.(java 项目自动生成文档):
+https://blog.csdn.net/ryo1060732496/article/details/88650947
+https://github.com/houbb/idoc
+
+为 github markdown 文件生成目录(toc):
+https://blog.csdn.net/ryo1060732496/article/details/79208680
+https://github.com/houbb/markdown-toc
+
+【qdox】Java 代码解析利器 QDox:
+https://github.com/kiwiflydream/study-example
+https://github.com/kiwiflydream/study-example/tree/master/study-qdox-example

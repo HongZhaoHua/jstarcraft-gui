@@ -5,8 +5,8 @@ XMind API 開發指令:
 https://actsmind.com/blog/support/xmind-api
 
 【xmind】 使用 Java 生成思维导图:
-https://zhuanlan.zhihu.com/p/95075913
 https://github.com/kiwiflydream/study-example
+https://github.com/kiwiflydream/study-example/tree/master/study-xmind-example
 
 xmind解析为json，对象，支持xmindzen，旧版xmind8:
 https://github.com/liufree/xmindparser-java
